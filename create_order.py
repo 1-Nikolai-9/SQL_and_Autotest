@@ -9,6 +9,5 @@ def post_new_order(body):
 
 
 response = post_new_order(data.order_body)
-track = {"t": response.json()["track"]}
-
+track = response.json()["track"]
 
