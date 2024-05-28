@@ -8,6 +8,5 @@ def post_new_order(body):
                          json=body, headers=data.headers)
 
 
-response = post_new_order(data.order_body)
-track = response.json()["track"]
-
+def get_created_order(track):
+    return requests.get(configuration.URL_SERVICE + configuration.GET_ORDER, params=track)
